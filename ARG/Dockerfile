@@ -2,6 +2,7 @@ ARG version
 FROM almalinux:${version:-8}
 ARG COURSE=Devops
 ARG TRAINER=Siva
-ENV Duration=120hrs
+ARG Duration=120hrs
+ENV Duration=${Duration}
 RUN echo "Course is : ${COURSE}, Trainer is : ${TRAINER}, Duration is: ${Duration}"
 CMD ["sleep","100"]
